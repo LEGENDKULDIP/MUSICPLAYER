@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "343554619593",
+    "project_id": "musicwala-e98e1",
+    "storage_bucket": "musicwala-e98e1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:343554619593:android:513abcd338b608b2d83518",
+        "android_client_info": {
+          "package_name": "com.example.musicplayer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "343554619593-ptcrgfmrfvcd5sk1131vrcchm2h2kn95.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZel0-gE7fbF1OMI8YGSWEakurMDiQ6mc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "343554619593-ptcrgfmrfvcd5sk1131vrcchm2h2kn95.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

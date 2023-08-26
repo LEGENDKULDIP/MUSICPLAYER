@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="50dp"
+    android:background="@drawable/nowplaying_backgroundd"
+    android:layout_marginRight="6dp"
+    android:layout_marginLeft="6dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.NowPlaying_Fragment">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/musicImage"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/starboy"
+        app:shapeAppearanceOverlay="@style/softCorner" />
+
+
+    <TextView
+        android:id="@+id/TvSongname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_toStartOf="@id/playbtn"
+        android:layout_toEndOf="@id/musicImage"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:layout_marginTop="3dp"
+        android:maxLines="1"
+        android:text="Starboy - the Weekend"
+        android:textColor="@color/white_smoke"
+        android:textSize="14sp"
+        tools:ignore="NotSibling" />
+    <TextView
+        android:id="@+id/TvSingername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@id/musicImage"
+        android:textColor="@color/white_smoke"
+        android:text="the weekend"
+        android:textSize="10sp"
+        tools:ignore="NotSibling" />
+    <ImageButton
+        android:id="@+id/playbtn"
+        android:layout_width="50dp"
+        android:src="@drawable/baseline_play_arrow_24"
+        android:scaleType="centerCrop"
+        android:layout_gravity="center"
+        android:layout_marginRight="45dp"
+        android:layout_alignParentEnd="true"
+        android:backgroundTint="@color/transparent"
+        android:contentDescription="@string/tab_layout_description"
+        android:layout_height="50dp"/>
+    <ImageButton
+        android:id="@+id/nextbtn"
+        android:layout_width="50dp"
+        android:src="@drawable/baseline_next"
+        android:layout_alignParentEnd="true"
+        android:scaleType="centerCrop"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/transparent"
+        android:contentDescription="@string/tab_layout_description"
+        app:iconTint="@color/white_smoke"
+        android:layout_height="50dp"/>
+
+
+</RelativeLayout>

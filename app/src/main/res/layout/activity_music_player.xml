@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/gradient"
+    android:orientation="vertical"
+    tools:context=".Music_player">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/backbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@color/transparent"
+            android:contentDescription="@string/tab_layout_description"
+            android:src="@drawable/baseline_backarrow" />
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:theme="@style/ThemeOverlay.MaterialComponents.Toolbar.Primary"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/musiceimage"
+        android:layout_marginTop="30dp"
+        app:shapeAppearanceOverlay="@style/curved"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_height="330dp"
+        android:scaleType="fitCenter"
+        android:layout_gravity="center"
+        android:src="@drawable/starboy"
+        />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="60dp">
+
+        <TextView
+            android:id="@+id/musicname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="35dp"
+            android:layout_marginLeft="35dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="STARBOY- THE WEEKEND"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+        <ImageButton
+            android:visibility="gone"
+            android:id="@+id/likeimgbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="35dp"
+            android:contentDescription="@string/tab_layout_description"
+            android:background="@android:color/transparent"
+            android:src="@drawable/baseline_favorite_24"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+    <SeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:min="0"
+        android:progressTint="@color/white"
+        android:max="100"
+        android:progressBackgroundTint="@color/white"
+        android:progress="0"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/Seekbarstarttime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="00:00"
+            android:layout_marginTop="2dp"/>
+
+        <TextView
+            android:id="@+id/Seekbarendtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="00:00"
+            android:layout_marginStart="256dp"
+            android:layout_marginTop="2dp"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <Space
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/previousbtn"
+            android:layout_width="60dp"
+            app:icon="@drawable/previous"
+            android:backgroundTint="@color/transparent"
+            android:contentDescription="@string/tab_layout_description"
+            app:iconSize="26dp"
+            app:iconTint="@color/white_smoke"
+            android:layout_height="60dp"/>
+        <Space
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"/>
+
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/playorpausebtn"
+            android:layout_width="wrap_content"
+            app:icon="@drawable/baseline_pause_24"
+            android:contentDescription="@string/tab_layout_description"
+            app:iconSize="35dp"
+            android:backgroundTint="@color/yellow"
+            android:layout_height="wrap_content">
+        </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
+        <ProgressBar
+            android:id="@+id/loadingProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="center"/>
+        <Space
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/nextbtn"
+            android:layout_width="60dp"
+            app:icon="@drawable/next"
+            app:iconSize="26dp"
+            android:backgroundTint="@color/transparent"
+            android:contentDescription="@string/tab_layout_description"
+
+            app:iconTint="@color/white_smoke"
+            android:layout_height="60dp"/>
+        <Space
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"/>
+
+
+
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="380dp"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:background="@color/gray"
+        android:layout_height="1dp"/>
+
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_height="40dp">
+
+        <ImageButton
+            android:id="@+id/equilizerbtn"
+            android:layout_width="40dp"
+            android:src="@drawable/equilizzer"
+            android:contentDescription="@string/tab_layout_description"
+            app:icon="@drawable/baseline_equalizer_24"
+            android:backgroundTint="@color/transparent"
+            app:iconTint="@color/white_smoke"
+            android:layout_height="wrap_content"/>
+        <Space
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"/>
+
+
+        <ImageButton
+            android:id="@+id/shufflebtn"
+            android:layout_width="40dp"
+            android:src="@drawable/baseline_shuffle"
+            app:icon="@drawable/baseline_shuffle"
+            android:backgroundTint="@color/transparent"
+            android:contentDescription="@string/tab_layout_description"
+            app:iconTint="@color/white_smoke"
+            android:layout_height="20dp"/>
+        <Space
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"/>
+
+
+        <ImageButton
+            android:id="@+id/timerbtn"
+            android:layout_width="40dp"
+            android:src="@drawable/baseline_timer_24"
+            android:backgroundTint="@color/transparent"
+            android:contentDescription="@string/tab_layout_description"
+            app:iconTint="@color/white_smoke"
+            android:layout_height="wrap_content"/>
+
+        <Space
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"/>
+
+        <ImageButton
+            android:id="@+id/sharebtn"
+            android:layout_width="40dp"
+            android:src="@drawable/share"
+            android:scaleType="centerCrop"
+            app:icon="@drawable/baseline_shuffle"
+            android:backgroundTint="@color/transparent"
+            android:contentDescription="@string/tab_layout_description"
+            app:iconTint="@color/white_smoke"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

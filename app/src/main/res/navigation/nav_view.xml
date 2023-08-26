@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_view"
+    app:startDestination="@id/home_Fragment">
+
+    <activity
+        android:id="@+id/home_Activity"
+        android:name="com.example.musicplayer.Home_Activity"
+        android:label="activity_home"
+        tools:layout="@layout/activity_home" />
+    <fragment
+        android:id="@+id/home_Fragment"
+        android:name="com.example.musicplayer.Fragment.Home_Fragment"
+        android:label="fragment_home_"
+        tools:layout="@layout/fragment_home_" >
+        <action
+            android:id="@+id/action_home_Fragment_to_likedSongActivitiy2"
+            app:destination="@id/likedSongActivitiy2" />
+    </fragment>
+    <fragment
+        android:id="@+id/mymusic_Fragment"
+        android:name="com.example.musicplayer.Fragment.Mymusic_Fragment"
+        android:label="fragment_mymusic_"
+        tools:layout="@layout/fragment_mymusic_" />
+    <fragment
+        android:id="@+id/search_Fragment"
+        android:name="com.example.musicplayer.Fragment.Search_Fragment"
+        android:label="fragment_search_"
+        tools:layout="@layout/fragment_search_" />
+    <fragment
+        android:id="@+id/setting_Fragment"
+        android:name="com.example.musicplayer.Fragment.Setting_Fragment"
+        android:label="fragment_setting_"
+        tools:layout="@layout/fragment_setting_" />
+    <activity
+        android:id="@+id/likedSongActivitiy2"
+        android:name="com.example.musicplayer.likedSongs.LikedSongActivitiy"
+        android:label="activity_liked_song_activitiy"
+        tools:layout="@layout/activity_liked_song_activitiy" />
+</navigation>

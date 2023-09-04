@@ -1,5 +1,6 @@
 # MusicPlayer
-A MusicPlayer which can play both online and offline song with notification,playbacks etc.. tools that are used Coroutines, Glide, third party libraries, firebase database,
+A MusicPlayer which can play both online and offline song with notification,playbacks etc.. tools that are used Coroutines, Glide, third party libraries, firebase database, 
+[checkout video of MusicPlayer](https://youtu.be/IoWv-_64STs?si=dzBtSbsAYFwUIRi5)
 
 # Images
 
